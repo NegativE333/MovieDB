@@ -1,0 +1,122 @@
+<%- include('header') -%>
+
+  <div>
+    <div class="showing">
+      <div class="nowShowingMovies">
+        <table>
+          <tr>
+            <th>No.</th>
+            <th>Now Showing</th>
+          </tr>
+          <tr>
+            <td>
+              1
+            </td>
+            <td>
+              Bheed
+            </td>
+          <tr>
+            <td>
+              2
+            </td>
+            <td>
+              Chor Nikal Ke Bhaga
+            </td>
+          </tr>
+          <tr>
+            <td>
+              3
+            </td>
+            <td>
+              Zwigato
+            </td>
+          </tr>
+          </tr>
+        </table>
+        <div>
+          <h2 style="font-weight: 400; text-align: center; margin-top: 25px">Book a Movie Show</h2>
+          <section>
+            <div class="form-box">
+              <div class="form-value">
+                <form action="" method="POST">
+                  <div class="inputbox">
+                    <ion-icon name="videocam-outline"></ion-icon>
+                    <input type="text" id="mname" name="mname" placeholder="Movie Name">
+                  </div>
+                  <div class="inputbox">
+                    <input type="date" id="dob" name="dob" placeholder="Date of Booking">
+                  </div>
+                  <div class="inputbox">
+                    <input type="text" id="timeSlot" name="timeSlot" placeholder="Time Slot">
+                  </div>
+                  <div class="inputbox">
+                    <input type="number" id="seatNo" name="seatNo" placeholder="Seat Number ">
+                  </div>
+                  <button type="submit">Book</button>
+                </form>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      
+      <div class="showingRight">
+        <table>
+          <tr>
+            <th>Seat types available</th>
+            <th>Seat No. Range</th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <td>
+              Exective
+            </td>
+            <td>1-20</td>
+            <td>150</td>
+          <tr>
+            <td>
+              Club
+            </td>
+            <td>21-40</td>
+            <td>300</td>
+          </tr>
+          <tr>
+            <td>
+              Royal
+            </td>
+            <td>41-60</td>
+            <td>500</td>
+          </tr>
+          </tr>
+        </table>
+        <div style="display: flex; margin-top: 10px; align-items: center; justify-content: center;">
+          <span style="width: 17px; height: 17px; background-color: rgb(116, 240, 28); border-radius: 5px;">
+          </span>
+          <span style="margin-left: 3px;">
+            Available
+          </span>
+          <span style="font-size: 25px; margin: 0 35px 0 35px;">
+            Seats Available
+          </span>
+          <span style="width: 17px; height: 17px; background-color:black; border-radius: 5px;">
+          </span>
+          <span style="margin-left: 3px;">
+            Not Available
+          </span>
+        </div>
+        <div class="seat">
+          <% for(var i=1; i<=60; i++){ %>
+            <% if(seat.includes(i)){ %>
+              <div class="seatRow" style="background-color: black;color: white; cursor: not-allowed;">
+                <%= i %>
+              </div>
+              <% } else{ %>
+                <div class="seatRow" style="background-color: rgb(116, 240, 28);">
+                  <%= i %>
+                </div>
+                <% } %>
+                  <% } %>
+        </div>
+      </div>
+    </div>
+  </div>

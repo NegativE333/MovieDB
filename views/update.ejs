@@ -1,0 +1,99 @@
+<%- include("header") -%>
+  <div class="add">
+    <div class="genre">
+      <table>
+        <tr>
+          <th>Genre Name</th>
+          <th>Genre Id</th>
+        </tr>
+        <% for(var i=0; i<gdata.length; i++){ %>
+          <tr>
+            <td>
+              <%= gdata[i].genre_name %>
+            </td>
+            <td>
+              <%= gdata[i].genre_id %>
+            </td>
+          </tr>
+          <% } %>
+      </table>
+    </div>
+    <div class="formDiv">
+      <section>
+        <div class="form-box">
+          <div class="form-value">
+            <form action="" method="POST">
+              <div class="inputbox">
+                <ion-icon name="albums-outline"></ion-icon>
+                <input type="text" id="mid" name="mid" placeholder="Movie ID">
+              </div>
+              <div class="inputbox">
+                <ion-icon name="videocam-outline"></ion-icon>
+                <input type="text" id="mname" name="mname" placeholder="Movie Name">
+              </div>
+              <div class="inputbox">
+                <ion-icon name="funnel-outline"></ion-icon>
+                <input type="number" id="genre" name="genre" placeholder="Genre ">
+              </div>
+              <div class="inputbox">
+                <ion-icon name="flag-outline"></ion-icon>
+                <input type="number" id="country" name="country" placeholder="Country ">
+              </div>
+              <div class="inputbox">
+                <ion-icon name="language-outline"></ion-icon>
+                <input type="number" id="language" name="language" placeholder="Language ">
+              </div>
+              <div class="inputbox">
+
+                <input type="date" id="release" name="release" placeholder="Release Year">
+              </div>
+              <div class="inputbox">
+                <ion-icon name="star-half-outline"></ion-icon>
+                <input type="text" id="rating" name="rating" placeholder="Rating ">
+              </div>
+              <button type="submit" style="margin-top: 15px;">Update</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <div class="note">
+        <h4>Note</h4>
+        <p>To update a movie movie_id is required then by entering all the required details you can update the movie details.</p>
+      </div>
+    </div>
+    <div class="language">
+      <table>
+        <tr>
+          <th>Language Name</th>
+          <th>Language Id</th>
+        </tr>
+        <% for(var i=0; i<ldata.length; i++){ %>
+          <tr>
+            <td>
+              <%= ldata[i].language_name %>
+            </td>
+            <td>
+              <%=ldata[i].language_id %>
+            </td>
+          </tr>
+          <% } %>
+      </table>
+      <br>
+      <table>
+        <tr>
+          <th>Country Name</th>
+          <th>Country Id</th>
+        </tr>
+        <% for(var i=0; i<cdata.length; i++){ %>
+          <tr>
+            <td>
+              <%= cdata[i].country_name %>
+            </td>
+            <td>
+              <%=cdata[i].country_id %>
+            </td>
+          </tr>
+          <% } %>
+      </table>
+    </div>
+  </div>

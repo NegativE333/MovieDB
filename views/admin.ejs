@@ -1,0 +1,49 @@
+<%- include('header') -%>
+
+<div>
+    <div class="admin">
+        <div class="adminPanel">
+            <h2>Admin Section</h2>
+            <div class="movieTicketInfo">
+                <div class="ticket"> 
+                    <table>
+                        <tr>
+                            <th>Seat Type</th>
+                            <th>No. of seats booked</th>
+                            <th>Profite</th>
+                        </tr>
+                        <tr>
+                            <td>Exective</td>
+                            <td><%= exective %></td>
+                            <td><%= exective*150 %> ₹</td>
+                        </tr>
+                        <tr>
+                            <td>Club</td>
+                            <td><%= club %></td>
+                            <td><%= club*300 %> ₹</td>
+                        </tr>
+                        <tr>
+                            <td>Royal</td>
+                            <td><%= royal %></td>
+                            <td><%= royal*500 %> ₹</td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td><%= sc[0].seatCount %></td>
+                            <td><%= tp %> ₹</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cancleTicket">
+                    <form action="" method="POST"> 
+                        <div class="form-box" style="border: none;">
+                        <button type="submit" style="width: 200px;"> 
+                            Clear all bookings
+                        </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

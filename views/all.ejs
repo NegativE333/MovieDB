@@ -1,0 +1,67 @@
+<%- include("header") -%>
+
+<div class="home">
+    <h1 class="title2">All Movie's</h1>
+
+    <% if(action=='add'){ %>
+    
+    <%} else{ %>
+        <div class="table">
+            <table cellpadding = "10" cellspacing = "2">
+                <tr class="row">
+                    <th>Sr No.</th>
+                    <th>Movie ID</th>
+                    <th>Movie Name</th>
+                    <th>Genre</th>
+                    <th>Country</th>
+                    <th>Language</th>
+                    <th>Release Date</th>
+                    <th>Rating</th>
+                </tr>
+            <% 
+            if(sampleData.length>0){  
+            %>
+                    <% for(var i = 0; i<sampleData.length; i++){ %>
+             
+                
+                    <tr class="row">
+                        <td>
+                            <%= i+1 %>
+                        </td>
+                        <td>
+                            <%= sampleData[i].movie_id %>
+                        </td>
+                        <td>
+                            <%= sampleData[i].title %>
+                        </td>
+                        <td>
+                            <%= sampleData[i].genre_name %>
+                        </td>
+                        <td>
+                            <%= sampleData[i].country_name %>
+                        </td>
+                        <td>
+                            <%= sampleData[i].language_name %>
+                        </td>
+                        <td>
+                            <%= sampleData[i].date_only %>
+                        </td>
+                        <td>
+                            <%= sampleData[i].rating %>
+                        </td>
+                    </tr>
+            <%
+                }
+            }
+            else{
+            %>
+            <h1>No data found</h1>
+            <%
+            }
+            %>
+        </table>
+        </div>
+    <% } %>
+
+</div>
+

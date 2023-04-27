@@ -1,0 +1,36 @@
+<%- include("header") %>
+    <div class="search">
+        <section>
+            <div class="form-box">
+                <div class="form-value">
+                    <form action="" method="post">
+                        <div class="inputbox">
+                            <ion-icon name="search-outline"></ion-icon>
+                            <input type="text" name="mname" id="mname" placeholder="Enter Movie Name">
+                        </div>
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <div>
+            <% if(Md.length>0){ %>
+                <div class="movieInfo">
+                    <p>Title: <%= Md[0].title %>
+                    </p>
+                    <p>Language: <%= Md[0].language_name %>
+                    </p>
+                    <p>Country: <%= Md[0].country_name %>
+                    </p>
+                    <p>Release Date: <%= Md[0].date_only %>
+                    </p>
+                    <p>Rating: <%= Md[0].rating %>
+                    </p>
+                </div>
+                <%} else{%>
+
+                    <%}%>
+        </div>
+        
+    </div>

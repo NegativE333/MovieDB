@@ -1,0 +1,54 @@
+<%- include('header') -%>
+    <div class="reviews">
+        <div class="formDiv">
+            <section>
+                <div class="form-box">
+                    <div class="form-value">
+                        <form action="" method="POST">
+                            <div class="oneLiner">
+                                <div class="inputbox">
+                                    <ion-icon name="person-outline"></ion-icon>
+                                    <input type="text" id="username" name="username" placeholder="Enter your name" />
+                                </div>
+                                <div class="inputbox">
+                                    <ion-icon name="videocam-outline"></ion-icon>
+                                    <input type="text" id="mname" name="mname" placeholder="Movie Name" />
+                                </div>
+                                <div class="inputbox">
+                                    <ion-icon name="star-half-outline"></ion-icon>
+                                    <input type="text" id="rating" name="rating"
+                                        placeholder="How much you rate it outof 10" />
+                                </div>
+                            </div>
+                            <div class="area">
+                                <textarea id="review" name="review" maxlength="300"
+                                    placeholder="Enter your review here. Please keep it under 300 characters."></textarea>
+                                <button type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="reviewList">
+
+            <% for(var i=0; i<reviews.length; i++){ %>
+
+                <div class="review">
+                    <h1 style="font-size: 20px;">
+                        Movie Title: <%= reviews[i].title %>
+                    </h1>
+                    <p style="font-size: 18px;">
+                        Rating: <%= reviews[i].rating %>
+                    </p>
+                    <p style="font-size: 13px;">
+                        <%= reviews[i].review %>
+                    </p>
+                    <p style="text-align: right;">
+                        <b> - <%= reviews[i].userName %> </b>
+                    </p>
+                </div>
+                <% } %>
+        </div>
+    </div>
